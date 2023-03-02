@@ -17,17 +17,6 @@ body {
   /* background-color: black; */
 }
 
-.nav {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  grid-template-areas: "logo icon";
-  justify-content: space-between;
-  height: 70px;
-  align-items: center;
-  --logo-hidden: 0;
-  --logo-show: 1;
-}
-
 .container {
   width: 90%;
   margin: 0 auto;
@@ -35,41 +24,68 @@ body {
   max-width: 1200px;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+
+  /* grid-template-columns: repeat(2, max-content);
+  grid-template-areas: "logo icon";
+  justify-content: space-between;
+  align-items: center;
+  --logo-hidden: 0;
+  --logo-show: 1; */
+}
+
 .nav__input {
   display: none;
 }
 
+.nav__figure {
+  order: -1;
+  display: grid;
+  /* defining only one area to overlap both icons */
+  grid-template-areas: img;
+  z-index: 10;
+  --logo-hidden: 0;
+  --logo-show: 1;
+}
 
-.nav__input:checked + .nav__figure {
+.nav__input:checked ~ .nav__figure {
   --logo-hidden: 1;
   --logo-show: 0;
 }
 
-.nav__figure {
-  grid-area: logo;
-  display: grid;
-  grid-template-areas: img;
+.nav__input:checked ~ .nav__content {
+  clip-path: circle(150% at top right);
+  --opacity: 1;
+  --transform: translateY(0);
 }
 
+
 .nav__logo {
-  grid-area: logo;
+  grid-area: img;
   opacity: var(--logo-show);
 }
 
 .nav__logo--hidden {
-opacity: var(--logo-hidden);
+  opacity: var(--logo-hidden);
 }
 
 .nav__content {
   position: absolute;
-  display: flex;
   padding-top: 80px;
-  padding-bottom: 90ox;
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
   /* background-blend-mode: 80px; */
   inset: 0;
   background-color: hsl(229, 31%, 21%, 0.8);
-  flex-direction: column;
   clip-path: circle(0% at 100% 0);
+  transition: clip-parth 0.8s;
+  --opacity: 0;
+  --transition: opacity 0.3s 0.7s;
 }
 
 .nav__toggle {
@@ -81,19 +97,18 @@ opacity: var(--logo-hidden);
   background-position: center;
   grid-area: icon;
   cursor: pointer;
+  z-index: 10;
 }
 
+.nav__input:checked + .nav__toggle {
+  background-image: url(images/icon-close.svg);
+}
 .nav__list {
   padding: 0;
-  /* width: 90%;
-  margin: 0 auto; */
   list-style: none;
-  /* background-color: hsl(229, 31%, 21%, .7); */
-  /* display: grid;
-  grid-template-columns: 5% 1fr 5%;
-  position: absolute;
-  inset: 0;
-  padding-top: 80px; */
+  opacity: var(--opacity);
+  transition: var(--transition);
+  /* transform: var(--transform); */
 }
 
 .nav__item {
@@ -112,15 +127,16 @@ opacity: var(--logo-hidden);
 .nav__link--last {
   display: block;
   border: 3px solid white;
-  padding: 1rem;
+  padding: 1rem 0;
   border-radius: 3px;
 }
 
 .nav__media {
+  opacity: var(--opacity);
+  transition: var(--transition);
   margin-top: auto;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
+  
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
