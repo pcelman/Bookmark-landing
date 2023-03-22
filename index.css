@@ -309,40 +309,62 @@ svg path {
       --tab3: 4px solid var(--soft-red);
   }
 
+  .tab1:target ~ .features__content {
+    --area1: 2;
+    --area2: 0;
+    --area3: 0;
+  }
+
+  .tab2:target ~ .features__content {
+    --area1: 0;
+    --area2: 2;
+    --area3: 0;
+  } 
+
+  .tab3:target ~ .features__content {
+    --area1: 0;
+    --area2: 0;
+    --area3: 2;
+  } 
+
   .features__content {
     margin-top: 80px;
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: 5% 1fr 5%;
     grid-template-areas: ". article .";
-    --area1: visible;
-    --area2: hidden;
-    --area3: hidden;
+    --area1: 2;
+    --area2: 0;
+    --area3: 0;
   }
 
   .features__img {
     width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
   }
 
   .features__article {
     grid-area: article;
-    visibility: var(--area1);
+    opacity: var(--area1);
+    transition: .4s opacity;
   }
   
   .features__article:nth-last-of-type(2) {
-    visibility: hidden;
-    visibility: var(--area2);
+    opacity: hidden;
+    opacity: var(--area2);
   }
 
   .features__article:nth-last-of-type(3) {
-    visibility: hidden;
-    visibility: var(--area3);
+    opacity: hidden;
+    opacity: var(--area3);
   }
 
  
 
   .features__text {
-    paddingn-top: 80px;
+    padding-top: 80px;
     text-align: center;
 
   }
@@ -365,3 +387,68 @@ svg path {
     text-decoration: none;
   }
 
+
+  /* download */
+
+.download{
+  width: 90%;
+  text-align: center;
+}
+
+.download__title{
+  font-size: 1.7rem;
+  color: var(--very-dark-blue);
+}
+
+.download__paragraph{
+  color: var(--grayish-blue);
+  margin: 1rem auto 2.5rem;
+  max-width: 400px;
+}
+
+.download__container{
+  width: 97%;
+  margin: 3rem auto 0;
+  max-width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.download__item{
+  box-shadow: 0 3px 6px var(--grayish-blue-alpha);
+  padding: 2.5rem 0;
+  border-radius: 12px;
+}
+
+.download__img{
+  width: 50%;
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+.download__browser{
+  margin-top: 30px;
+  color: var(--very-dark-blue);
+  font-size: 1.4rem;
+}
+
+.download__version{
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 6px dotted var(--grayish-blue-alpha);
+  color: var(--grayish-blue);
+  line-height: 1.5;
+}
+
+.download__extension{
+  display: block;
+  width: 90%;
+  background-color: var(--soft-blue);
+  margin: 1.3rem auto 0;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 0;
+  border-radius: 4px;
+}
