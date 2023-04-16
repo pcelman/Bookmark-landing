@@ -16,14 +16,13 @@ body {
 
 .container {
   width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  max-width: 1200px;
 }
 
 .nav {
   height: 70px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,12 +34,9 @@ body {
 
 .nav__figure {
   order: -1;
-
   display: grid;
   grid-template-areas: img;
-
   z-index: 10;
-
   --logo-hidden: 0;
   --logo-show: 1;
 }
@@ -60,7 +56,6 @@ svg path {
 
 .nav__input:checked ~ .nav__content {
   clip-path: circle(150% at top right);
-
   --opacity: 1;
   --transform: translateY(0);
 }
@@ -81,26 +76,20 @@ svg path {
   background-size: contain;
   background-position: center;
   background-image: url("../images/icon-hamburger.svg");
-
   z-index: 10;
   cursor: pointer;
 }
 
 .nav__content {
-  --opacity: 0;
-  --transtion: opacity 0.3s 0.7s;
-
-  background-color: hsl(229, 31%, 21%, 0.8);
-
   padding-top: 80px;
   padding-bottom: 80px;
-
+  position: absolute;
   display: flex;
   flex-direction: column;
-
-  position: absolute;
+  --opacity: 0;
+  --transtion: opacity 0.3s 0.7s;
+  background-color: hsl(229, 31%, 21%, 0.8);
   inset: 0;
-
   clip-path: circle(0% at 100% 0);
   transition: clip-path 0.8s;
 }
@@ -108,7 +97,6 @@ svg path {
 .nav__list {
   opacity: var(--opacity);
   transition: var(--transtion);
-
   padding: 0;
   list-style: none;
 }
@@ -134,11 +122,10 @@ svg path {
 }
 
 .nav__media {
+  margin-top: auto;
+  display: flex;
   opacity: var(--opacity);
   transition: var(--transtion);
-  margin-top: auto;
-
-  display: flex;
   justify-content: center;
   align-items: center;
   gap: 3em;
@@ -158,18 +145,13 @@ svg path {
   content: "";
   grid-column: 2/4;
   grid-row: 1/2;
-
   align-self: end;
   justify-self: end;
-
   width: 60%;
-  aspect-ratio: 3/2;
-
-  z-index: -1;
-
-  border-radius: 80px 0 0 80px;
-
   max-width: 400px;
+  aspect-ratio: 3/2;
+  z-index: -1;
+  border-radius: 80px 0 0 80px;
   background-color: var(--soft-blue);
 }
 
@@ -196,9 +178,9 @@ svg path {
 }
 
 .hero__paragraph {
+  margin: 1.5rem 0 1rem;
   line-height: 1.5;
   color: var(--grayish-blue);
-  margin: 1.5rem 0 1rem;
 }
 
 .hero__buttons {
@@ -208,7 +190,6 @@ svg path {
   grid-auto-flow: column;
   grid-auto-columns: max-content;
   justify-content: space-between;
-  /* gap: 1rem; */
 }
 
 .hero__cta {
@@ -218,7 +199,6 @@ svg path {
   text-decoration: none;
   color: #fff;
   border-radius: 6px;
-
   box-shadow: 0 2px 4px #0000005f;
 }
 
@@ -230,9 +210,9 @@ svg path {
 /* features  */
 
 .features {
+  padding: 80px 0;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  padding: 80px 0;
 }
 
 .features__container {
@@ -245,19 +225,19 @@ svg path {
 }
 
 .features__paragraph {
+  margin: 1.5rem 0 2rem;
   line-height: 1.5;
   color: var(--grayish-blue);
-  margin: 1.5rem 0 2rem;
 }
 
 .features__tabs {
   padding: 0;
-  list-style: none;
   width: 100%;
+  grid-column: 2/3;
+  list-style: none;
   --tab1: 4px solid var(--soft-red);
   --tab2: 4px solid transparent;
   --tab3: 4px solid transparent;
-  grid-column: 2/3;
 }
 
 .features__tab {
@@ -265,7 +245,7 @@ svg path {
 }
 
 .features__tab:last-of-type {
-    border-bottom: 1px solid var(--grayish-blue);
+  border-bottom: 1px solid var(--grayish-blue);
 }
 .features__click {
   color: var(--grayish-blue);
@@ -374,16 +354,16 @@ svg path {
   }
 
   .features__copy {
+    margin: 1rem 0;
     color: var(--grayish-blue);
     line-height: 1.5;
-    margin: 1rem 0;
   }
 
   .features__cta {
+    padding: 1rem;
+    display: inline-block;
     background-color: var(--soft-blue);
     color: white;
-    display: inline-block;
-    padding: 1rem;
     text-decoration: none;
   }
 
@@ -401,24 +381,23 @@ svg path {
 }
 
 .download__paragraph{
-  color: var(--grayish-blue);
   margin: 1rem auto 2.5rem;
+  color: var(--grayish-blue);
   max-width: 400px;
 }
 
 .download__container{
-  width: 97%;
   margin: 3rem auto 0;
+  width: 97%;
   max-width: 400px;
-
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
 
 .download__item{
-  box-shadow: 0 3px 6px var(--grayish-blue-alpha);
   padding: 2.5rem 0;
+  box-shadow: 0 3px 6px var(--grayish-blue-alpha);
   border-radius: 12px;
 }
 
@@ -430,8 +409,8 @@ svg path {
 
 .download__browser{
   margin-top: 30px;
-  color: var(--very-dark-blue);
   font-size: 1.4rem;
+  color: var(--very-dark-blue);
 }
 
 .download__version{
@@ -443,16 +422,15 @@ svg path {
 }
 
 .download__extension{
-  display: block;
   width: 90%;
-  background-color: var(--soft-blue);
   margin: 1.3rem auto 0;
+  padding: 1rem 0;
+  display: block;
+  background-color: var(--soft-blue);
   color: #fff;
   text-decoration: none;
-  padding: 1rem 0;
   border-radius: 4px;
 }
-
 
 /* article */
 
@@ -476,37 +454,33 @@ svg path {
 }
 
 .article__paragraph{
-  color: var(--grayish-blue);
   margin: 1rem auto 2.5rem;
   max-width: 400px;
+  color: var(--grayish-blue);
 }
 
 .article__container{
-  max-width: 450px;
   margin: 0 auto;
+  max-width: 450px;
 }
 
 .article__question{
+  padding: 1.6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 1.4rem;
   text-align: left;
   color: var(--very-dark-blue);
   font-weight: 400;
-  padding: 1.6rem 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
   cursor: pointer;
 }
 
 .article__content{
   display: grid;
-  border-bottom: 2px solid var(--grayish-blue);
-
   grid-template-rows: 0fr;
-
   transition: grid-template-rows .3s;
+  border-bottom: 2px solid var(--grayish-blue);
 }
 
 .article__content--show{
@@ -522,17 +496,15 @@ svg path {
   text-align: left;
   padding-top: 0;
   color: var(--grayish-blue);
-
- 
 }
 
 .article__cta{
   display: inline-block;
   margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
   background-color: var(--soft-blue);
   color: #fff;
   text-decoration: none;
-  padding: 1rem 1.5rem;
 }
 
 /* joined */
@@ -542,22 +514,22 @@ svg path {
 }
 
 .joined__container{
-  max-width: 500px;
   width: 90%;
+  max-width: 500px;
   color: #fff;
   text-align: center;
 }
 
 .joined__paragraph{
+  margin-bottom: 1rem;
   line-height: 1.5;
   letter-spacing: 2px;
-  margin-bottom: 1rem;
 }
 
 .joined__title{
+  margin-bottom: 2rem;
   font-size: 1.7rem;
   font-weight: 400;
-  margin-bottom: 2rem;
 }
 
 .joined__form{
@@ -594,9 +566,9 @@ svg path {
 }
 
 .footer__list{
+  margin: 1.5rem 0;
   padding: 0;
   list-style: none;
-  margin: 1.5rem 0;
 }
 
 .footer__link{
@@ -632,20 +604,18 @@ svg path {
   }
   
   .nav__container{
-      position: static;
       padding:0;
-      min-height: unset;
-
-      background-color: #fff;
-  
+      position: static;
       display: block;    
+      min-height: unset;
+      background-color: #fff;
       transform: unset;
       transition:none;
   }
 
   .nav__list{
-      width:unset;
       display: grid;
+      width:unset;
       grid-auto-flow: column;
       gap: 2rem;
   }
@@ -684,13 +654,12 @@ svg path {
   }
   
   .hero__figure::before{
-     bottom: 0;
-     width: 70%;
-     max-width: 600px;
+    width: 70%;
+    max-width: 600px;
+    bottom: 0;
   }
   
   .hero__img{
-    
       max-width: 5000px;
   }
   
@@ -711,8 +680,6 @@ svg path {
       justify-content: flex-start;
   }
   
-  
-  
   /* features */
   
   .features{
@@ -721,18 +688,16 @@ svg path {
   
   .features__content{
       grid-column: 2/4;
-     
   }
   
   .features__title{
       font-size: 2.5rem;
   }
   
-  
   .features__list{
+      margin: 0 auto;
       display: flex;
       justify-content: center;
-      margin: 0 auto;
       width: max-content;
       border-bottom: 2px solid var(--grayish-blue-alpha);
   }
@@ -777,13 +742,12 @@ svg path {
   }
   
   .features__texts{
-      width: 100%;
       margin-top: 0;
+      width: 100%;
       text-align: left;
   }
   
   .features__subtitle{
-      
       font-size: 2rem;
   }
   
@@ -800,11 +764,10 @@ svg path {
   
   
   .download__container{
+      margin: 4rem auto 0;
       width: 100%;
       max-width: unset;
-      margin: 4rem auto 0;
       padding: 0 2rem;
-
       gap: 2rem;
       flex-direction: row;
       align-items: flex-start;
@@ -851,10 +814,10 @@ svg path {
   }
   
   .footer__list{
-      display: flex;
-      gap: 1rem;
       margin: 0;
       margin-left: 3rem;
+      display: flex;
+      gap: 1rem;
   }
   
   .footer__media{
