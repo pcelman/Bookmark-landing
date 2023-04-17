@@ -1,4 +1,4 @@
-## Sunnyside landing - Frontend Mentor Challenge
+## Bookmark landing - Frontend Mentor Challenge
 [Visit the webpage](https://pcelman.github.io/Bookmark-landing/)
 
 <img width="762" alt="Screenshot 2023-02-27 at 23 01 46" src="https://user-images.githubusercontent.com/100241036/221733741-5b5ba9ac-0206-4cdf-a013-18a929c90458.png">
