@@ -1,5 +1,5 @@
 ## Sunnyside landing - Frontend Mentor Challenge
-[Visit the webpage](https://pcelman.github.io/Sunnyside-landing/)
+[Visit the webpage](https://pcelman.github.io/Bookmark-landing/)
 
 <img width="762" alt="Screenshot 2023-02-27 at 23 01 46" src="https://user-images.githubusercontent.com/100241036/221733741-5b5ba9ac-0206-4cdf-a013-18a929c90458.png">
 
@@ -27,7 +27,7 @@ To use this code in your own project, copy the files into your project directory
 
 ## Usage
 
-Open the `index.html` file in your web browser or [visit the webpage](https://insure-pcv.vercel.app/) to view the responsive layout in action. Resize the browser window to see the layout change from column to row-based layout.
+Open the `index.html` file in your web browser or [visit the webpage](https://pcelman.github.io/Bookmark-landing/) to view the responsive layout in action. Resize the browser window to see the layout change from column to row-based layout.
 
 ## Contributing
 
