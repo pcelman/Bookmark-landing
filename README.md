@@ -13,9 +13,9 @@ Overall, Sunnyside showcases the power and versatility of Flexbox and responsive
 
 - HTML5
 - CSS3
-- JavaScript
 - Flexbox
 - Grid
+- JavaScript
 
 ## Features
 
