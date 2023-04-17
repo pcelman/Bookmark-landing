@@ -1,7 +1,7 @@
 ## Bookmark landing - Frontend Mentor Challenge
 [Visit the webpage](https://pcelman.github.io/Bookmark-landing/)
 
-<img width="762" alt="Screenshot 2023-02-27 at 23 01 46" src="https://user-images.githubusercontent.com/100241036/221733741-5b5ba9ac-0206-4cdf-a013-18a929c90458.png">
+<img width="1581" alt="Screenshot 2023-04-17 at 13 54 17" src="https://user-images.githubusercontent.com/100241036/232556282-3be964e5-4a72-456f-8e02-62ea29aa25cf.png">
 
 Sunnyside Landing page is a web application that uses Flexbox and responsive design techniques to create a dynamic and user-friendly menu. The menu can be accessed by clicking on the menu icon located in the top left corner of the page on small devices. When clicked, the menu smoothly transitions into view, revealing the different sections of the website.
 
@@ -13,6 +13,7 @@ Overall, Sunnyside showcases the power and versatility of Flexbox and responsive
 
 - HTML5
 - CSS3
+- JavaScript
 - Flexbox
 - Grid
 
